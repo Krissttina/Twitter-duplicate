@@ -17,11 +17,23 @@ body {
     margin: 50px 50px;
     padding: 15px 15px;
     border-color: black;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 0 5px 1px;
 }
 
+article{
+    height: 30px;
+    border-bottom: 1px solid rgb(156, 149, 149);
+    position: relative;
+    padding: 0 50px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
 img{
+    padding-top: 5px;
     width: 60px;
     border-radius: 50px;
     float: left;
@@ -29,22 +41,36 @@ img{
 }
 
 .name{
+    padding-top: 5px;
     font-weight: bold;
     margin-right: 10px;
 }
 
 .icons{
     display: flex;
+    padding-top: 5px;
 }
 
 .heart{
     padding: 0 10px;
 }
 
+.heart:hover{
+    color: rgb(228, 41, 41);
+}
+
 .tag{
     padding: 0 10px;
 }
 
+.tag:hover{
+    color: rgb(114, 109, 158);
+}
+
 .comment{
     padding: 0 10px;
+}
+
+.comment:hover{
+    color: rgb(202, 199, 199);
 }
