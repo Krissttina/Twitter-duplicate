@@ -44,6 +44,8 @@ img{
     padding-top: 5px;
     font-weight: bold;
     margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .icons{
