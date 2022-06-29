@@ -2,15 +2,28 @@ const heart = document.getElementById('hart');
 const hashtag = document.getElementById('hashtag');
 const comment = document.getElementById('comnt');
     
-heart.addEventListener("click", () => {
+function getRed(){
+    if(heart.style.color == "red"){
+        heart.style.color = "black";
+    }else{
         heart.style.color = "red";
-}) 
+    }
+}
 
 
-hashtag.addEventListener("click", () => {
-    hashtag.style.color = "blue"; 
-})
+function getBlue(){
+    if(hashtag.style.color == "blue"){
+        hashtag.style.color = "black"; 
+    }else{
+       hashtag.style.color = "blue"; 
+    }
+}
+    
 
-comment.addEventListener("click", () => {
-    comment.style.color = "grey"; 
-})
+function getMarked(){
+    if(comment.style.color == "grey"){
+        comment.style.color = "black"; 
+    }else{
+        comment.style.color = "grey"; 
+    }
+}
