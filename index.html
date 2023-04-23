@@ -16,15 +16,14 @@
          <p class="user">@tina_m</p>
          <p class="status">Status: Busy &#128203;</p>
         <div class="icons">
-                <p id="heart"><i class="fa-solid fa-heart"></i></p> 
-                <p id="hashtag"><i class="fa-solid fa-hashtag"></i></p>
-                
-                <p id="comment"><i class="fa-solid fa-comment"></i></p>
+                <p id="heart" onclick="onLike()"><i class="fa-solid fa-heart"></i></p> 
+                <p id="hashtag" onclick="addTag()"><i class="fa-solid fa-hashtag"></i></p>
+                <p id="comment" onclick="addComment()"><i class="fa-solid fa-comment"></i></p>
         </div>
-        <input type="text" placeholder="tag">
+        <input id="tag" type="text" placeholder="tag" hidden>
     </section>
     <section class="comment-container">
-        <p>Comments:</p>
+        <p>Comments:<input id="comm" type="text" placeholder="comment" hidden></p>
     </section>
     </main>
     

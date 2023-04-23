@@ -10,68 +10,81 @@ body {
     margin-top: 100px;
 }
 
+/*container*/
 .content{
     margin: 50px 50px;
     padding: 15px 15px;
     border-color: black;
+    width: 260px;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 0 5px 1px;
 }
 
-#name+
-{
+/*name - header*/
+.name{
     height: 30px;
     border-bottom: 1px solid rgb(156, 149, 149);
-    position: relative;
-    padding: 0 50px;
+    font-weight: bold;
+    display: flex;
     font-size: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
+/*image - profile pic*/
 img{
-    padding-top: 5px;
+    padding: 5px;
     width: 60px;
-    border-radius: 50px;
+    border-radius: 50%;
     float: left;
+    margin-top: 10px;
     margin-right: 10px;
 }
 
-.name{
-    padding-top: 5px;
-    font-weight: bold;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/*image - profile pic*/
+.user{
+    margin-top: 10px;
+    color: gray;
 }
 
+/*icons style*/
 .icons{
     display: flex;
     padding-top: 5px;
 }
 
-.heart{
+#heart{
     padding: 0 10px;
 }
 
-.heart:hover{
+#heart:hover{
     color: rgb(228, 41, 41);
 }
 
-.tag{
+#hashtag{
     padding: 0 10px;
 }
 
-.tag:hover{
+#hashtag:hover{
     color: rgb(114, 109, 158);
 }
 
-.comment{
+#comment{
     padding: 0 10px;
 }
 
-.comment:hover{
+#comment:hover{
     color: rgb(202, 199, 199);
 }
 
+/*comment container*/
+.comment-container{
+    margin: 50px 50px;
+    padding: 15px 15px;
+    border-color: black;
+    width: 260px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px;
+}
