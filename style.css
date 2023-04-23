@@ -1,16 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
   
 body {
-    display: block;
-    width: 20vw;
-    height: 60vh;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 100px;
 }
 
 .content{
@@ -22,7 +19,8 @@ body {
     box-shadow: 0 0 5px 1px;
 }
 
-article{
+#name+
+{
     height: 30px;
     border-bottom: 1px solid rgb(156, 149, 149);
     position: relative;
@@ -76,3 +74,4 @@ img{
 .comment:hover{
     color: rgb(202, 199, 199);
 }
+
