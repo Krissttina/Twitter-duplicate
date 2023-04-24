@@ -54,10 +54,7 @@ img{
     padding-top: 5px;
 }
 
-#heart{
-    padding: 0 10px;
-}
-
+/*when the heart icon is hoved on it becoms red*/
 #heart:hover{
     color: rgb(228, 41, 41);
 }
@@ -66,14 +63,12 @@ img{
     padding: 0 10px;
 }
 
+/*when the hashtag icon is hoved on it becoms red*/
 #hashtag:hover{
-    color: rgb(114, 109, 158);
+    color: rgb(101, 94, 165);
 }
 
-#comment{
-    padding: 0 10px;
-}
-
+/*when the comment icon is hoved on it becoms red*/
 #comment:hover{
     color: rgb(202, 199, 199);
 }

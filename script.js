@@ -1,43 +1,69 @@
-const heart = document.getElementById('heart');
-const hashtag = document.getElementById('hashtag');
-const comment = document.getElementById('comment');
+const content = document.querySelector(".content");
+const commentContainer = document.querySelector(".comment-container");
 
-const hashtagAdd = document.getElementById('tag');
-const commentAdd = document.getElementById('comm');
-    
-function onLike(){
-    if(heart.style.color == "red"){
-        heart.style.color = "black";
-    }else{
-        heart.style.color = "red";
-    }
+const heart = document.getElementById("heart");
+const hashtag = document.getElementById("hashtag");
+const comment = document.getElementById("comment");
+
+const hashtagAdd = document.getElementById("tag");
+const commentAdd = document.getElementById("comm");
+
+const addBtn = document.getElementById('addBtn');
+const addcomBtn = document.getElementById('addcomBtn');
+
+//when the heard icon is clicked becomes red
+//when it s clicked again its color gets back to black 
+function onLike() {
+  if (heart.style.color == "red") {
+    heart.style.color = "black";
+  } else {
+    heart.style.color = "red";
+  }
 }
 
-function addTag(){
-    if(hashtag.style.color == "blue"){
-        hashtag.style.color = "black";
-        
-    }else{
-       hashtag.style.color = "blue"; 
-       hashtagAdd.removeAttribute('hidden');
-    }
-
-    if(hashtag.value){
-        let newtag = hashtagAdd.value;
-        console.log(newtag);
-    }
+//when the tag icon is clicked becomes blue
+//when it s clicked again its color gets back to black 
+function addTag() {
+  if (hashtag.style.color == "blue") {
+    hashtag.style.color = "black";
+    hashtagAdd.setAttribute("hidden", true);
+    addBtn.disabled = true;
+  } else {
+    hashtag.style.color = "blue";
+    hashtagAdd.removeAttribute("hidden");
+    addBtn.disabled = false;
+  }
 }
 
-function addComment(){
-    if(comment.style.color == "grey"){
-        comment.style.color = "black"; 
-    }else{
-        comment.style.color = "grey";
-        commentAdd.removeAttribute('hidden');
-    }
+//add new tag
+addBtn.addEventListener('click', () => {
+    let newtag = hashtagAdd.value;
+    let p = document.createElement("p");
+    content.appendChild(p);
+    p.textContent = newtag;
+    hashtagAdd.value = '';
+})
 
-    if(commentAdd.value){
-        let newcom = commentAdd.value;
-        console.log(newcom);
-    }
+//when the heard icon is clicked becomes red
+//when it s clicked again its color gets back to black 
+function addComment() {
+  if (comment.style.color == "grey") {
+    comment.style.color = "black";
+    commentAdd.setAttribute("hidden", true);
+    addcomBtn.disabled = true;
+  } else {
+    comment.style.color = "grey";
+    commentAdd.removeAttribute("hidden");
+    addcomBtn.disabled = false;
+  }
 }
+
+//add new comment
+addcomBtn.addEventListener('click', () => {
+    let newcom = commentAdd.value;
+    console.log(newcom);
+    let p = document.createElement("p");
+    commentContainer.appendChild(p);
+    p.textContent = newcom;
+    commentAdd.value = '';
+})
