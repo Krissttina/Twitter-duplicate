@@ -42,11 +42,34 @@ function addTag() {
 //add new tag
 addBtn.addEventListener('click', () => {
     let newtag = hashtagAdd.value;
+    if(newtag == ''){
+      return;
+    }
+
     let p = document.createElement("p");
     content.appendChild(p);
-    p.textContent = newtag;
+    p.textContent = `#${newtag}`;
+    let save = hashtagAdd.value;
     hashtagAdd.value = '';
-})
+
+    //create delete button
+    let delBtn = document.createElement("button");
+    delBtn.textContent = 'Delete';
+    p.appendChild(delBtn);
+    delBtn.addEventListener('click', () => {
+      p.remove(); //delete text
+    });
+
+    //create edit button
+    let editBtn = document.createElement("button");
+    editBtn.textContent = 'Edit';
+    p.appendChild(editBtn);
+
+    editBtn.addEventListener('click', () => {
+      hashtagAdd.value = save;
+      p.remove();
+    });
+});
 
 //when the heard icon is clicked becomes red
 //when it s clicked again its color gets back to black 
@@ -65,9 +88,32 @@ function addComment() {
 //add new comment
 addcomBtn.addEventListener('click', () => {
     let newcom = commentAdd.value;
-    console.log(newcom);
+
+    if(newcom == ''){
+      return;
+    }
+
     let p = document.createElement("p");
     commentContainer.appendChild(p);
     p.textContent = newcom;
+    let save = commentAdd.value;
     commentAdd.value = '';
-})
+
+    //create delete button
+    let delBtn = document.createElement("button");
+    delBtn.textContent = 'Delete';
+    p.appendChild(delBtn);
+    delBtn.addEventListener('click', () => {
+      p.remove(); //delete text
+    });
+
+    //create edit button
+    let editBtn = document.createElement("button");
+    editBtn.textContent = 'Edit';
+    p.appendChild(editBtn);
+
+    editBtn.addEventListener('click', () => {
+      commentAdd.value = save;
+      p.remove();
+    });
+});
