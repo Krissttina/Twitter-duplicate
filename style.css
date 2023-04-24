@@ -48,6 +48,27 @@ img{
     color: gray;
 }
 
+#tag{
+    margin: 5px 0;
+}
+
+button{
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+#likes{
+    padding: 0 5px;
+}
+
 /*icons style*/
 .icons{
     display: flex;

@@ -11,13 +11,17 @@ const commentAdd = document.getElementById("comm");
 const addBtn = document.getElementById('addBtn');
 const addcomBtn = document.getElementById('addcomBtn');
 
+const likes = document.getElementById('likes');
+
 //when the heard icon is clicked becomes red
 //when it s clicked again its color gets back to black 
 function onLike() {
   if (heart.style.color == "red") {
     heart.style.color = "black";
+    likes.textContent = 0; 
   } else {
     heart.style.color = "red";
+    likes.textContent = 1; 
   }
 }
 
